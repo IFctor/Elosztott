@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Hallgato Lista</title>
+</head>
+<body>
+A hallgatók listája
+<span th:text="${appName}"about=""> Our App</span>
+<table>
+<tr th:each="hallgato : ${hallgatoList}">
+    <td th:text="${hallgato.nev}" />
+    <td th:text="${hallgato.eletkor}" />
+    <td th:text="${hallgato.szak}" />
+</tr>
+</table>
+
+</body>
+</html>

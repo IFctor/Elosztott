@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Hallgato Lista</title>
+    <style>
+        .fielderror {background-color: red}
+    </style>
+</head>
+<body>
+    <form action="/hallgato/add" method="post" th:object="${hallgato}">
+
+        <ul>
+            <li th:each="err : ${#fields.errors('nev')}" th:text="${err}"/>
+        </ul>
+    <br/>
+        Nev: <input th:field="*{nev}"
+                    th:class="${#fields.hasErrors('nev')}?fieldError">
+<br/>
+
+        <ul>
+            <li th:each="err : ${#fields.errors('eletkor')}" th:text="${err}"/>
+        </ul>
+        <br/>
+        Életkor: <input th:field="*{eletkor}"
+                        th:class="${#fields.hasErrors('eletkor')}?fieldError">
+        <br/>
+
+        <ul>
+            <li th:each="err : ${#fields.errors('szak')}" th:text="${err}"/>
+        </ul>
+        <br/>
+        Szak: <input th:field="*{szak}"
+                     th:class="${#fields.hasErrors('szak')}?fieldError">
+        <input type="submit"/>
+    </form>
+</body>
+</html>
