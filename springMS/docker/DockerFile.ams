@@ -1,0 +1,7 @@
+FROM anapsix/alpine-java:8_jdk
+MAINTAINER ifctor
+COPY ams.jar /opt/spring-cloud/lib/ams.jar
+
+ENTRYPOINT ["/opt/jdk/bin/java"]
+CMD ["-jar", "/opt/spring-cloud/lib/ams.jar"]
+EXPOSE 2222
