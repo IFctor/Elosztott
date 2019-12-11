@@ -1,7 +1,0 @@
-FROM anapsix/alpine-java:8_jdk
-MAINTAINER ifctor
-COPY eureka.jar /opt/spring-cloud/lib/eureka.jar
-
-ENTRYPOINT ["/opt/jdk/bin/java"]
-CMD ["-jar", "/opt/spring-cloud/lib/eureka.jar"]
-EXPOSE 8888
