@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: hu.miskolc.uni.iit.cloud.demo.DemoApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.225 s <<< FAILURE! - in hu.miskolc.uni.iit.cloud.demo.DemoApplicationTests
+contextLoads  Time elapsed: 0.004 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'demoApplication': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'account.service.url' in value "${account.service.url}"
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'account.service.url' in value "${account.service.url}"
+
