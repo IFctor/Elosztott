@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="202728b6-9954-4983-bbdc-0b3332fb7469" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/demo/src/main/resources/demo-server.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/ams.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/commands_byAlex.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/eureka.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FBbot/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FBbot/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="202728b6-9954-4983-bbdc-0b3332fb7469" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/cloud-server/target/" />
@@ -24,17 +18,7 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docker/commands_byAlex.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="2" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -152,108 +136,7 @@
     <panes>
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="springMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springMS" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springMS" type="462c0819:PsiDirectoryNode" />
-              <item name="account-micro-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springMS" type="462c0819:PsiDirectoryNode" />
-              <item name="account-micro-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springMS" type="462c0819:PsiDirectoryNode" />
-              <item name="account-micro-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springMS" type="462c0819:PsiDirectoryNode" />
-              <item name="account-micro-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springMS" type="462c0819:PsiDirectoryNode" />
-              <item name="account-micro-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="accounts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springMS" type="462c0819:PsiDirectoryNode" />
-              <item name="account-micro-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springMS" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud-server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springMS" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springMS" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springMS" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springMS" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springMS" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springMS" type="462c0819:PsiDirectoryNode" />
-              <item name="docker" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -346,12 +229,12 @@
       <workItem from="1574861386867" duration="6703000" />
       <workItem from="1575961180271" duration="628000" />
       <workItem from="1576044306084" duration="2744000" />
-      <workItem from="1576052852985" duration="7812000" />
+      <workItem from="1576052852985" duration="8415000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27411000" />
+    <option name="totallyTimeSpent" value="28014000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -364,7 +247,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Web" order="0" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.3283582" />
@@ -378,7 +260,7 @@
       <window_info anchor="bottom" id="Messages" order="1" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" />
-      <window_info anchor="bottom" id="Run" order="4" visible="true" weight="0.32827735" />
+      <window_info anchor="bottom" id="Run" order="4" weight="0.32827735" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
