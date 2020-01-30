@@ -18,7 +18,14 @@ public class RoBotServiceImpl implements RoBotService {
             response.setMessage(new Message().setText("hello"));
         }
         else if(event.getMessage() != null && message.startsWith("?")) {
-            int result = new Calculator().calculate(message);
+            Calculator calculator =new Calculator();
+            if(calculator.isValidInput(message.substring(1))){
+                int result = calculator.calculate(message.substring(1));
+                response.setMessage(new Message().setText("A válaszom: "+result));
+            }else {
+                response.setMessage(new Message().setText("ezt nem tudom kiszamolni formai hiba miatt"));
+            }
+
         }
         else {
             response.setMessage(new Message().setText("nem tudom mit akarsz"));
