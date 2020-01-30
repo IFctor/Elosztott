@@ -1,6 +1,5 @@
 package hu.miskolc.uni.iit.fbbot.services;
 
-import hu.miskolc.uni.iit.fbbot.builders.FbbotWebClientBuilder;
 import hu.miskolc.uni.iit.fbbot.facebook.models.Event;
 import hu.miskolc.uni.iit.fbbot.facebook.models.User;
 import lombok.RequiredArgsConstructor;

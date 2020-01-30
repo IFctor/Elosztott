@@ -4,8 +4,19 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Calculator {
+/**
+ * a+b*c-d/e
+ * 1.   b*c
+ * 2.   d/e
+ * 3.   a+1.
+ * 4.   3.-2.
+ * Előszőr szétválasztani a + és - mentén
+ * Aztán vizsgálni, hogy a rész tartalmaz-e * vagy / -t
+ * Azt elvégezni
+ * és annak az értékét vissza adni
+ */
 
-    String operatorRegEx="[+-]";
+    String operatorRegEx="[+-/*/]";
     String oparandsRegEx="[0-9]+";
     public int calculate(String row){
         System.out.println(row);

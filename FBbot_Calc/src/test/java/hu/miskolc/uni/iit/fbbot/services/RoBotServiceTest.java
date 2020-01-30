@@ -78,4 +78,20 @@ class RoBotServiceTest {
         event.setMessage(new Message().setText("?0+25-85"));
         assertEquals("A válaszom: -60", roBotService.getResponse(event).getMessage().getText());
     }
+
+    @Test
+    void getResponse_0mu25di85_input_0_output() {
+        Event event = new Event();
+
+        event.setMessage(new Message().setText("?0*25/85"));
+        assertEquals("A válaszom: 0", roBotService.getResponse(event).getMessage().getText());
+    }
+
+    @Test
+    void getResponse_0di85_input_0_output() {
+        Event event = new Event();
+
+        event.setMessage(new Message().setText("?0/85"));
+        assertEquals("A válaszom: 0", roBotService.getResponse(event).getMessage().getText());
+    }
 }
