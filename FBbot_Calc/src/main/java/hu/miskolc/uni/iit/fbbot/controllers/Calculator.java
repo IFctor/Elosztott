@@ -16,29 +16,34 @@ public class Calculator {
  * és annak az értékét vissza adni
  */
 
-    String operatorRegEx="[+-/*/]";
+    String allOperatorRegEx ="[+-/*/]";
+    String additiveOperatorRegEx="[+-]";
+    String multiplicativeOperatorRegEx="[/*/]";
     String oparandsRegEx="[0-9]+";
-    public int calculate(String row){
-        System.out.println(row);
-        String operators[]=row.split(oparandsRegEx);
-        String operands[]=row.split(operatorRegEx);
-        int agregate = Integer.parseInt(operands[0]);
-        for(int i=1;i<operands.length;i++){
-            if(operators[i].equals("+"))
-                agregate += Integer.parseInt(operands[i]);
+
+    public double calculate(String row){
+        String additivMembers[] =separateAdditivMember(row);
+        String additivOperators[]=row.split(oparandsRegEx+
+                "("+multiplicativeOperatorRegEx+oparandsRegEx+")*");
+        double result = calculateMultiplicativMember(additivMembers[0]);
+        for(int i=1; i<additivMembers.length;i++)
+        {
+            if(additivOperators[i].equals("+"))
+                result += calculateMultiplicativMember(additivMembers[i]);
             else
-                agregate -= Integer.parseInt(operands[i]);
+                result -= calculateMultiplicativMember(additivMembers[i]);
         }
-        return agregate;
+
+
+        return result;
     }
 
     public boolean isValidInput(String row){
 
         boolean result=false;
-        String patternString="(("+oparandsRegEx+")"+operatorRegEx+")*("+oparandsRegEx+")";
+        String patternString="(("+oparandsRegEx+")"+ allOperatorRegEx +")*("+oparandsRegEx+")";
         Pattern p = Pattern.compile(patternString);
         Matcher m = p.matcher(row);
-
 
         if (m.matches()) {
             result = true;
@@ -46,5 +51,36 @@ public class Calculator {
         return result;
     }
 
+    public boolean hasDividebyZero(String row){
+        boolean result=false;
+        String patternString="[/][0]";
+        Pattern p = Pattern.compile(patternString);
+        Matcher m = p.matcher(row);
 
+        if (m.find()) {
+            result = true;
+        }
+        return result;
+    }
+
+
+    private String[] separateAdditivMember(String row){
+        String additivMembers[]=row.split(additiveOperatorRegEx);
+
+                return additivMembers;
+    }
+
+    private double calculateMultiplicativMember(String row)
+    {
+        String operators[]=row.split(oparandsRegEx);
+        String operands[]=row.split(multiplicativeOperatorRegEx);
+        double result = Integer.parseInt(operands[0]);
+        for(int i=1;i<operands.length;i++){
+            if(operators[i].equals("*"))
+                result *= Integer.parseInt(operands[i]);
+            else
+                result /= Integer.parseInt(operands[i]);
+        }
+        return result;
+    }
 }

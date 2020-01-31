@@ -1,12 +1,12 @@
 package hu.miskolc.uni.iit.fbbot.controllers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import hu.miskolc.uni.iit.fbbot.facebook.models.Callback;
 import hu.miskolc.uni.iit.fbbot.facebook.models.Entry;
 import hu.miskolc.uni.iit.fbbot.facebook.models.Event;
-import hu.miskolc.uni.iit.fbbot.facebook.models.Message;
 import hu.miskolc.uni.iit.fbbot.services.FBService;
 import hu.miskolc.uni.iit.fbbot.services.RoBotService;
+import hu.miskolc.uni.iit.fbbot.facebook.models.Callback;
+import hu.miskolc.uni.iit.fbbot.facebook.models.Message;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;

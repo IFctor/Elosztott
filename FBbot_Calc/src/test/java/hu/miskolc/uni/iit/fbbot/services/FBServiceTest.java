@@ -1,8 +1,8 @@
 package hu.miskolc.uni.iit.fbbot.services;
 
 import hu.miskolc.uni.iit.fbbot.facebook.models.Event;
-import hu.miskolc.uni.iit.fbbot.facebook.models.Message;
 import hu.miskolc.uni.iit.fbbot.facebook.models.User;
+import hu.miskolc.uni.iit.fbbot.facebook.models.Message;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

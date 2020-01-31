@@ -44,15 +44,15 @@ class RoBotServiceTest {
         Event event = new Event();
 
         event.setMessage(new Message().setText("?8"));
-        assertEquals("A válaszom: 8", roBotService.getResponse(event).getMessage().getText());
+        assertEquals("A válaszom: 8.0", roBotService.getResponse(event).getMessage().getText());
     }
 
     @Test
-    void getResponse_12o58_input_70_output() {
+    void getResponse_12a58_input_70_output() {
         Event event = new Event();
 
         event.setMessage(new Message().setText("?12+58"));
-        assertEquals("A válaszom: 70", roBotService.getResponse(event).getMessage().getText());
+        assertEquals("A válaszom: 70.0", roBotService.getResponse(event).getMessage().getText());
     }
 
     @Test
@@ -60,23 +60,23 @@ class RoBotServiceTest {
         Event event = new Event();
 
         event.setMessage(new Message().setText("?0-25"));
-        assertEquals("A válaszom: -25", roBotService.getResponse(event).getMessage().getText());
+        assertEquals("A válaszom: -25.0", roBotService.getResponse(event).getMessage().getText());
     }
 
     @Test
-    void getResponse_0m25o85_input_60_output() {
+    void getResponse_0m25a85_input_60_output() {
         Event event = new Event();
 
         event.setMessage(new Message().setText("?0-25+85"));
-        assertEquals("A válaszom: 60", roBotService.getResponse(event).getMessage().getText());
+        assertEquals("A válaszom: 60.0", roBotService.getResponse(event).getMessage().getText());
     }
 
     @Test
-    void getResponse_0o25m85_input_m60_output() {
+    void getResponse_0a25m85_input_m60_output() {
         Event event = new Event();
 
         event.setMessage(new Message().setText("?0+25-85"));
-        assertEquals("A válaszom: -60", roBotService.getResponse(event).getMessage().getText());
+        assertEquals("A válaszom: -60.0", roBotService.getResponse(event).getMessage().getText());
     }
 
     @Test
@@ -84,7 +84,7 @@ class RoBotServiceTest {
         Event event = new Event();
 
         event.setMessage(new Message().setText("?0*25/85"));
-        assertEquals("A válaszom: 0", roBotService.getResponse(event).getMessage().getText());
+        assertEquals("A válaszom: 0.0", roBotService.getResponse(event).getMessage().getText());
     }
 
     @Test
@@ -92,6 +92,22 @@ class RoBotServiceTest {
         Event event = new Event();
 
         event.setMessage(new Message().setText("?0/85"));
-        assertEquals("A válaszom: 0", roBotService.getResponse(event).getMessage().getText());
+        assertEquals("A válaszom: 0.0", roBotService.getResponse(event).getMessage().getText());
+    }
+
+    @Test
+    void getResponse_10di2_input_35_output() {
+        Event event = new Event();
+
+        event.setMessage(new Message().setText("?10/2+2*15"));
+        assertEquals("A válaszom: 35.0", roBotService.getResponse(event).getMessage().getText());
+    }
+
+    @Test
+    void getResponse_12di0_input_error_output() {
+        Event event = new Event();
+
+        event.setMessage(new Message().setText("?12/0"));
+        assertEquals("Van benne nullával való osztás", roBotService.getResponse(event).getMessage().getText());
     }
 }

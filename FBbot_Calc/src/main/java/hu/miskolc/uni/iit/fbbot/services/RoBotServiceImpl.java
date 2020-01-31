@@ -1,9 +1,12 @@
 package hu.miskolc.uni.iit.fbbot.services;
 
-import hu.miskolc.uni.iit.fbbot.controllers.Calculator;
 import hu.miskolc.uni.iit.fbbot.facebook.models.Event;
+import hu.miskolc.uni.iit.fbbot.controllers.Calculator;
 import hu.miskolc.uni.iit.fbbot.facebook.models.Message;
+import hu.miskolc.uni.iit.fbbot.facebook.models.User;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 @Service
 public class RoBotServiceImpl implements RoBotService {
@@ -13,21 +16,28 @@ public class RoBotServiceImpl implements RoBotService {
         Event response = new Event()
                 .setMessagingType("RESPONSE")
                 .setRecipient(event.getSender());
-        String message = event.getMessage().getText();
-        if (event.getMessage() != null && "hello".equals(message)) {
-            response.setMessage(new Message().setText("hello"));
+        String message = "";
+        if (event.getMessage() != null) {
+            message = event.getMessage().getText();
         }
-        else if(event.getMessage() != null && message.startsWith("?")) {
-            Calculator calculator =new Calculator();
-            if(calculator.isValidInput(message.substring(1))){
-                int result = calculator.calculate(message.substring(1));
-                response.setMessage(new Message().setText("A válaszom: "+result));
-            }else {
+
+        if ("hello".equals(message)) {
+            response.setMessage(new Message().setText("hello"));
+        } else if (message.startsWith("?")) {
+            Calculator calculator = new Calculator();
+            String subMessage = message.substring(1);
+            if (calculator.isValidInput(subMessage)) {
+                if (calculator.hasDividebyZero(subMessage) == false) {
+                    double result = calculator.calculate(subMessage);
+                    response.setMessage(new Message().setText("A válaszom: " + result));
+                } else {
+                    response.setMessage(new Message().setText("Van benne nullával való osztás"));
+                }
+            } else {
                 response.setMessage(new Message().setText("ezt nem tudom kiszamolni formai hiba miatt"));
             }
 
-        }
-        else {
+        } else {
             response.setMessage(new Message().setText("nem tudom mit akarsz"));
         }
         return response;
